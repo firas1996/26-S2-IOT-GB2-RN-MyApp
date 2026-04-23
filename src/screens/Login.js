@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import {
   StyleSheet,
@@ -17,6 +18,22 @@ const Login = () => {
   };
 
   const loginHandler = () => {
+    axios
+      .post("http://10.33.5.4:1212/users/signIn", userData)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+    // axios
+    //   .get("http://10.33.5.4:1212/users")
+    //   .then((res) => {
+    //     console.log(res.data);
+    //   })
+    //   .catch((e) => {
+    //     console.log(e);
+    //   });
     console.log(userData);
     setUserData({
       email: "",
