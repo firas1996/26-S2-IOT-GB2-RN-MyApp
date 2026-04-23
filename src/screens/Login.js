@@ -18,6 +18,10 @@ const Login = () => {
 
   const loginHandler = () => {
     console.log(userData);
+    setUserData({
+      email: "",
+      password: "",
+    });
   };
   return (
     <View style={styles.container}>
@@ -32,6 +36,7 @@ const Login = () => {
             onChangeText={(txt) => {
               inputChangeHandler(txt, "email");
             }}
+            value={userData.email}
           />
         </View>
         <View style={styles.inpV}>
@@ -41,6 +46,7 @@ const Login = () => {
             onChangeText={(txt) => {
               inputChangeHandler(txt, "password");
             }}
+            value={userData.password}
           />
         </View>
         <View>
