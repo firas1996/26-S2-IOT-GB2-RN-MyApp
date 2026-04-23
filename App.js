@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import AbcTest from "./src/components/AbcTest";
 import { useState } from "react";
+import Login from "./src/screens/Login";
 
 export default function App() {
   const name = "Firas";
@@ -12,9 +13,10 @@ export default function App() {
   };
   return (
     <View style={styles.container}>
-      <Text> {x} </Text>
+      {/* <Text> {x} </Text>
       <AbcTest name={name} getData={getData} />
-      <StatusBar style="auto" />
+      <StatusBar style="auto" /> */}
+      <Login />
     </View>
   );
 }
